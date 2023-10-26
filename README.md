@@ -1,4 +1,4 @@
-# NaturalNumbersInterpretation
+# Natural Numbers Interpretation
 An application that checks for possible ambiguities in number spelling and returns any possible number interpretations.
 
 # Brief Explanation of the Algorithm
