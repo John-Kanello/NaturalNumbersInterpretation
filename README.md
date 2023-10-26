@@ -22,7 +22,7 @@ As a final note, I will mention that even though the application follows the bus
 the numbers of the array to at most 3 digits, the algorithm that I developed works for n digits.
 For example, 1000 42, would result in the combinations:
 100042, 1042, 1000402.
-The appropriate exception handling guarantees that the number combination generator will not get called with more than 3 digits.
+The appropriate exception handling guarantees that the phone number combination generator will not get called with more than 3 digits.
 
 # How to run the program
 The program includes the Maven Wrapper mvnw.</br>
