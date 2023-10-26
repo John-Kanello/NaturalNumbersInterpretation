@@ -25,7 +25,7 @@ For example, 1000 42, would result in the combinations:
 The appropriate exception handling guarantees that the number combination generator will not get called with more than 3 digits.
 
 # How to run the program
-The program includes the Maven Wrapper mvnw. By running the command: <b>mvnw clean package</b>
+The program includes the Maven Wrapper mvnw. By running the command: @@ text in purple<b>mvnw clean package</b>@@
 A .jar file will be generated in the target folder.
 Then you can start the application by executing the command:  <b>java -jar name_of_the_jar_file.jar</b>
 
