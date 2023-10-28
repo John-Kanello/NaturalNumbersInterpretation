@@ -23,9 +23,6 @@ public class PhoneCombinationInterpreter {
     }
 
     private static void interpretCombinations(List<String> combinations) {
-        if(combinations.isEmpty()) {
-            throw new IllegalArgumentException("Number not Greek");
-        }
         for(int i = 0; i < combinations.size(); i++) {
             String combination = combinations.get(i);
             if(PhoneNumberValidator.isValidGreekNumber(combination)) {

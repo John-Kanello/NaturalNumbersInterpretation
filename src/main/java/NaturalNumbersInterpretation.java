@@ -24,7 +24,7 @@ public class NaturalNumbersInterpretation {
                     identifyNaturalNumberAmbiguities();
                     break;
                 default:
-                    System.out.println("You must choose a number between 0-2\n");
+                    System.out.println("You must choose a number between 0 and 2\n");
                     break;
             }
         }
@@ -33,12 +33,8 @@ public class NaturalNumbersInterpretation {
     private static void phoneNumberValidation() {
         System.out.println("\nPlease insert a comma separated sequence of numbers to validate phone number is Greek");
         try {
-            String keyBoardInput = String.join("", SCANNER.nextLine().split("\\s"));
-            if(PhoneNumberValidator.isValidGreekNumber(keyBoardInput)) {
-                System.out.println(keyBoardInput + "  [phone number: VALID]");
-            } else {
-                System.out.println(keyBoardInput + "  [phone number: INVALID]");
-            }
+            String keyBoardInput = SCANNER.nextLine();
+            PhoneNumberValidator.validate(keyBoardInput);
         } catch (IllegalArgumentException exception) {
             LOGGER.log(Level.SEVERE, exception.getMessage());
         }
