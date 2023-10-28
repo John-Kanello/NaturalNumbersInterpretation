@@ -13,10 +13,10 @@ public class PhoneCombinationGenerator {
                                                      List<String> combinations,
                                                      boolean canExtendCombination) {
         if(index == numbers.length) {
-            if(!phoneNumber.startsWith("2") && !phoneNumber.startsWith("69")
-                    && !phoneNumber.startsWith("00302") && !phoneNumber.startsWith("003069")) {
-                return combinations;
-            }
+//            if(!phoneNumber.startsWith("2") && !phoneNumber.startsWith("69")
+//                    && !phoneNumber.startsWith("00302") && !phoneNumber.startsWith("003069")) {
+//                return combinations;
+//            }
             combinations.add(phoneNumber);
             return combinations;
         }

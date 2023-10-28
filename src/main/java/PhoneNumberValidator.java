@@ -1,12 +1,11 @@
 public class PhoneNumberValidator {
-    public static boolean isValidGreekNumber(String input) {
-        if(input == null || input.isEmpty()) {
-            return false;
+    public static boolean isValidGreekNumber(String phoneNumber) {
+        if(phoneNumber == null || phoneNumber.isEmpty()) {
+            throw new IllegalArgumentException("Phone number cannot be null or empty");
         }
-        String phoneNumber = String.join("", input.split("\\s"));
         for(char c : phoneNumber.toCharArray()) {
             if(!Character.isDigit(c)) {
-                return false;
+                throw new IllegalArgumentException("Phone number can only contains numbers and spaces");
             }
         }
         int textLength = phoneNumber.length();

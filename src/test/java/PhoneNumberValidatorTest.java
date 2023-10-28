@@ -26,6 +26,8 @@ class PhoneNumberValidatorTest {
 
     @Test
     public void validatePhoneNumberContainingNonDigitsIsInvalid() {
-        assertFalse(PhoneNumberValidator.isValidGreekNumber("69312319f"));
+        assertThrows(IllegalArgumentException.class, () -> {
+            PhoneNumberValidator.isValidGreekNumber("69312319f");
+        });
     }
 }

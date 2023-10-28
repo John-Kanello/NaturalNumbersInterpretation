@@ -18,13 +18,13 @@ public class PhoneCombinationInterpreter {
         if(Arrays.stream(numbers).map(String :: length).mapToInt(len -> len).anyMatch(length -> length > 3)) {
             throw new IllegalArgumentException("Number cannot be longer than 3 digits");
         }
-        List<String> combinations = PhoneCombinationGenerator.generateCombinations(numbers);
-        evaluateCombinations(combinations);
+        List<String> combinations = EnglishPhoneCombinationGenerator.generateCombinations(numbers);
+        interpretCombinations(combinations);
     }
 
-    private static void evaluateCombinations(List<String> combinations) {
+    private static void interpretCombinations(List<String> combinations) {
         if(combinations.isEmpty()) {
-            System.out.println("No valid combinations were found");
+            throw new IllegalArgumentException("Number not Greek");
         }
         for(int i = 0; i < combinations.size(); i++) {
             String combination = combinations.get(i);
@@ -34,5 +34,6 @@ public class PhoneCombinationInterpreter {
                 System.out.println("Interpretation " + i + ": " + combination + "  [phone number: INVALID]");
             }
         }
+        System.out.println();
     }
 }
