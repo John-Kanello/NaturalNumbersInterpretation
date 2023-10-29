@@ -44,5 +44,8 @@ The application can be started by executing the command:</br><b>java -jar path_t
 The application contains Unit Tests for both phone number validation and identifying natural number ambiguities
 covering all the cases described above.
 
+Java Version: 17
+junit-jupiter-api Version: 5.10.0
+maven-jar-plugin Version: 3.3.0
 
 
