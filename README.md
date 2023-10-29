@@ -1,6 +1,6 @@
 # Natural Numbers Interpretation
 An application that checks for possible ambiguities in number spelling and returns any possible number interpretations. Also, 
-it checks if a given sequence of numbers forms a valid Greek Number.
+it checks if a given sequence of numbers forms a valid Greek Telephone Number.
 
 # Phone number validation
 Given an input provided by the user, the program evaluates the given input and outputs if it is a valid Greek phone number. Greek phone numbers may have 10 or 14 digits. 
