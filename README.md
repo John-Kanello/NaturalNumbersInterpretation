@@ -26,7 +26,7 @@ There are 3 cases with which the algorithm identifies possible ambiguities in an
     For example, 2 and 1 would have only one combination: 21.
 
 The appropriate exception handling guarantees that the phone number combination generator will not get called with invalid input
-ensuring that the input will always be a sequnce of space separated numbers.
+ensuring that the input will always be a sequnce of space separated numbers with a maximum length of 3.
 
 # How to run the program
 Clone the program to your local Git Repository by running the command:</br>
