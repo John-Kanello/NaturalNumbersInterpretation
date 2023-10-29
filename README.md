@@ -42,7 +42,7 @@ Then, assuming that Java is installed on the device, you can create a .jar file 
 The application can be started by executing the command:</br><b>java -jar path_to_the_name_of_the_jar_file.jar</b>
 
 The application contains Unit Tests for both phone number validation and identifying natural number ambiguities
-covering all the cases descived above.
+covering all the cases described above.
 
 
 
