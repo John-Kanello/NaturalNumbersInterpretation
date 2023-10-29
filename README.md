@@ -22,7 +22,7 @@ There are 3 cases with which the algorithm identifies possible ambiguities in an
 
    Note, another piece of logic that i added to this step is check if the next number can be
    split to its addends to concatenate the current number with the larger addend of the next number.</br>
-   Let's assume we have 2 numbers: 400 22.
+   Let's assume we have 2 numbers: 400 and 22.
    In English, the possible interpretations are 40022, 422, 400202 and finally 4202.
    The combination 4202 is achieved by splitting the next number to its addends (20+2) and then combining 400 and 20.
 
