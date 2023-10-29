@@ -9,8 +9,7 @@ public class PhoneCombinationInterpreter {
                     .replaceAll("\\s{2,}", " ")
                     .split("\\s");
             if(Arrays.stream(numbers).map(String :: length).mapToInt(len -> len).anyMatch(length -> length > 3)) {
-                throw new IllegalArgumentException(PhoneCombinationInterpreter.class.getSimpleName() +
-                        ": Number cannot be longer than 3 digits\n");
+                throw new IllegalArgumentException("Number cannot be longer than 3 digits");
             }
             List<String> combinations = PhoneCombinationGenerator.generateCombinations(numbers);
             interpretCombinations(combinations);

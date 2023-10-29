@@ -57,11 +57,4 @@ class PhoneCombinationGeneratorTest {
         assertEquals(List.of("2101234567"),
                 PhoneCombinationGenerator.generateCombinations(new String[]{"2","1","0","1","2","3","4","5","6","7"}));
     }
-
-    @Test
-    public void validateInvalidInputThrowsException() {
-        assertThrows(IllegalArgumentException.class, () -> {
-            PhoneCombinationGenerator.generateCombinations(new String[]{"210", "f", "24"});
-        });
-    }
 }

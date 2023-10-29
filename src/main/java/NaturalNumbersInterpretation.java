@@ -36,8 +36,7 @@ public class NaturalNumbersInterpretation {
             String keyBoardInput = SCANNER.nextLine();
             PhoneNumberValidator.validate(keyBoardInput);
         } catch (IllegalArgumentException exception) {
-            LOGGER.log(Level.SEVERE, exception.getMessage());
-//            exception.printStackTrace();
+            LOGGER.log(Level.SEVERE, exception.getMessage(), exception);
         }
     }
 
@@ -47,8 +46,7 @@ public class NaturalNumbersInterpretation {
             String keyBoardInput = SCANNER.nextLine();
             PhoneCombinationInterpreter.interpret(keyBoardInput);
         } catch (IllegalArgumentException exception) {
-//            LOGGER.log(Level.SEVERE, exception.getMessage());
-            exception.printStackTrace();
+            LOGGER.log(Level.SEVERE, exception.getMessage(), exception);
         }
     }
 }
