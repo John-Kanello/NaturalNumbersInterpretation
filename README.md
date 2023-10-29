@@ -36,8 +36,8 @@ ensuring that the input will always be a sequence of space separated numbers wit
 Clone the program to your local Git Repository by running the command:</br>
 <b>git clone https://github.com/John-Kanello/NaturalNumbersInterpretation.git</b></br></br>
 The program includes the Maven Wrapper mvnw.</br>
-Thus, a .jar file can be generated in the root/target folder without the need of installing Maven on the device.</br>
-Then, assuming that Java is installed on the device, you can create a .jar file by navigating to the root directory of the project and execute the command:
+Thus, a .jar file can be generated in the root/target folder without the need of installing Maven on your device.</br>
+Then, assuming that Java is installed on your device, you can create a .jar file by navigating to the root directory of the project and execute the command:
 </br><b>mvnw clean package</b></br></br>
 The application can be started by executing the command:</br><b>java -jar path_to_the_name_of_the_jar_file.jar</b>
 
