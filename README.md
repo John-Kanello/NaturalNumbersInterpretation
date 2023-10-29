@@ -4,7 +4,7 @@ it checks if a given sequence of numbers forms a valid Greek Number.
 
 # Ambiguities In Number Spelling
 There are 3 cases with which the algorithm identifies possible ambiguities in an array of numbers:
-1. It checks if the current number can be split to its addends to form a new number. The first number must be divisible
+1. It checks if the current number can be split to its addends to form a new number. The left and greater number must be divisible
   by 10 otherwise no new combination will be formed.</br>For example, the number 69 can have two possible interpretations 69 itself or 609(60+9).
 
    Note, one extra piece of logic that I added to this algorithm is checking wether an addend of
