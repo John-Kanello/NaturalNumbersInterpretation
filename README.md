@@ -32,7 +32,7 @@ There are 3 cases with which the algorithm identifies possible ambiguities in an
 The appropriate exception handling guarantees that the phone number combination generator will not get called with invalid input
 ensuring that the input will always be a sequnce of space separated numbers with a maximum length of 3.
 
-# How to run the program
+# How to run the application
 Clone the program to your local Git Repository by running the command:</br>
 <b>git clone https://github.com/John-Kanello/NaturalNumbersInterpretation.git</b></br></br>
 The program includes the Maven Wrapper mvnw.</br>
