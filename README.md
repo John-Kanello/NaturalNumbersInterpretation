@@ -20,7 +20,7 @@ There are 3 cases with which the algorithm identifies possible ambiguities in an
 2. It checks if the number at the current index can be combined with future numbers.</br>
    For example, the sequence 40 5 can have two possible interpretations 405 and 45.
 
-   Note, another piece of logic that i added to this step is check if the next number can be
+   Note, another piece of logic that I added to this step is check if the next number can be
    split to its addends to concatenate the current number with the larger addend of the next number.</br>
    Let's assume we have 2 numbers: 400 and 22.
    In English, the possible interpretations are 40022, 422, 400202 and finally 4202.
