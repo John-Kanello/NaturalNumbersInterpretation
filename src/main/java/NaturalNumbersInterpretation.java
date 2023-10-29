@@ -34,17 +34,21 @@ public class NaturalNumbersInterpretation {
         System.out.println("\nPlease insert a comma separated sequence of numbers to validate phone number is Greek");
         try {
             String keyBoardInput = SCANNER.nextLine();
-            PhoneNumberValidator.validate(keyBoardInput);
+            if(InputValidator.isValidInput(keyBoardInput)) {
+                PhoneNumberValidator.validate(keyBoardInput);
+            }
         } catch (IllegalArgumentException exception) {
             LOGGER.log(Level.SEVERE, exception.getMessage());
         }
     }
 
     private static void identifyNaturalNumberAmbiguities() {
-        System.out.println("\nPlease insert a comma separated sequence of numbers to identify phone number combinations");
+        System.out.println("\nPlease insert a comma separated sequence of numbers to identify phone number interpretations");
         try {
             String keyBoardInput = SCANNER.nextLine();
-            PhoneCombinationInterpreter.interpret(keyBoardInput);
+            if(InputValidator.isValidInput(keyBoardInput)) {
+                PhoneCombinationInterpreter.interpret(keyBoardInput);
+            }
         } catch (IllegalArgumentException exception) {
             LOGGER.log(Level.SEVERE, exception.getMessage());
         }
