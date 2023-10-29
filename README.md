@@ -29,7 +29,7 @@ There are 3 cases with which the algorithm identifies possible ambiguities in an
 3.  It simply extends the current phone number with the number at the current index.</br>
     For example, 2 and 1 would have only one combination: 21.
 
-The appropriate exception handling guarantees that the phone number combination generator will not get called with invalid input
+The appropriate exception handling guarantees that the phone number combination generator will not get called with qn invalid input,
 ensuring that the input will always be a sequnce of space separated numbers with a maximum length of 3.
 
 # How to run the application
