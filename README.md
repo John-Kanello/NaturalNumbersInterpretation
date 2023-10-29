@@ -24,7 +24,7 @@ There are 3 cases with which the algorithm identifies possible ambiguities in an
    split to its addends to concatenate the current number with the larger addend of the next number.</br>
    Let's assume we have 2 numbers: 400 and 22.
    In English, the possible interpretations are 40022, 422, 400202 and finally 4202.
-   The combination 4202 is achieved by splitting the next number to its addends (20+2) and then combining 400 and 20.
+   The combination 4202 is achieved by splitting the next number to its addends (20+2) and then combining 400 with 20.
 
 3.  It simply extends the current phone number with the number at the current index.</br>
     For example, 2 and 1 would have only one combination: 21.
