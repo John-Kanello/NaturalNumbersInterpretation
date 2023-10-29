@@ -3,15 +3,18 @@ import java.util.List;
 
 public class PhoneCombinationInterpreter {
     public static void interpret(String input) {
-        String[] numbers = input
-                .trim()
-                .replaceAll("\\s{2,}", " ")
-                .split("\\s");
-        if(Arrays.stream(numbers).map(String :: length).mapToInt(len -> len).anyMatch(length -> length > 3)) {
-            throw new IllegalArgumentException("Number cannot be longer than 3 digits\n");
+        if(InputValidator.isValidInput(input)) {
+            String[] numbers = input
+                    .trim()
+                    .replaceAll("\\s{2,}", " ")
+                    .split("\\s");
+            if(Arrays.stream(numbers).map(String :: length).mapToInt(len -> len).anyMatch(length -> length > 3)) {
+                throw new IllegalArgumentException(PhoneCombinationInterpreter.class.getSimpleName() +
+                        ": Number cannot be longer than 3 digits\n");
+            }
+            List<String> combinations = PhoneCombinationGenerator.generateCombinations(numbers);
+            interpretCombinations(combinations);
         }
-        List<String> combinations = PhoneCombinationGenerator.generateCombinations(numbers);
-        interpretCombinations(combinations);
     }
 
     private static void interpretCombinations(List<String> combinations) {

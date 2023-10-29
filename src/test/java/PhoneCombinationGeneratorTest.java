@@ -23,11 +23,11 @@ class PhoneCombinationGeneratorTest {
 
     @Test
     public void formCombinationByCombiningNumberWithTheNextNumber() {
-        assertEquals(Stream.of("6909109169", "6909109100609", "690910910069",
-                "69091009169", "69091009100609", "6909100910069")
+        assertEquals(Stream.of("2106930664", "210693664", "2106093664",
+                "21060930664")
                 .sorted()
                 .collect(Collectors.toList()),
-                PhoneCombinationGenerator.generateCombinations(new String[]{"60", "9", "09", "100", "9", "100", "69"})
+                PhoneCombinationGenerator.generateCombinations(new String[]{"2", "10", "69", "30", "6", "6", "4"})
                         .stream()
                         .sorted()
                         .collect(Collectors.toList())
@@ -36,8 +36,12 @@ class PhoneCombinationGeneratorTest {
 
     @Test
     public void formCombinationsBySplittingNumberToAddendsAndCombiningNumberWithTheNextNumber() {
-        assertEquals(Stream.of("0030697241352","00306972413502","0030697002041352"
-                ,"00306970020413502", "003069700241352", "0030697002413502")
+        assertEquals(Stream.of("00306097241352","003060972413502","003060972041352"
+                ,"0030609720413502", "00306097002041352", "003060970020413502",
+                                "0030609700241352", "00306097002413502", "0030697241352",
+                                "00306972413502", "00306972041352", "003069720413502",
+                                "0030697002041352", "00306970020413502", "003069700241352",
+                                "0030697002413502")
                 .sorted()
                 .collect(Collectors.toList()),
                 PhoneCombinationGenerator.generateCombinations(

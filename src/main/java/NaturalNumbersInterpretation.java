@@ -34,11 +34,10 @@ public class NaturalNumbersInterpretation {
         System.out.println("\nPlease insert a comma separated sequence of numbers to validate phone number is Greek");
         try {
             String keyBoardInput = SCANNER.nextLine();
-            if(InputValidator.isValidInput(keyBoardInput)) {
-                PhoneNumberValidator.validate(keyBoardInput);
-            }
+            PhoneNumberValidator.validate(keyBoardInput);
         } catch (IllegalArgumentException exception) {
             LOGGER.log(Level.SEVERE, exception.getMessage());
+//            exception.printStackTrace();
         }
     }
 
@@ -46,11 +45,10 @@ public class NaturalNumbersInterpretation {
         System.out.println("\nPlease insert a comma separated sequence of numbers to identify phone number interpretations");
         try {
             String keyBoardInput = SCANNER.nextLine();
-            if(InputValidator.isValidInput(keyBoardInput)) {
-                PhoneCombinationInterpreter.interpret(keyBoardInput);
-            }
+            PhoneCombinationInterpreter.interpret(keyBoardInput);
         } catch (IllegalArgumentException exception) {
-            LOGGER.log(Level.SEVERE, exception.getMessage());
+//            LOGGER.log(Level.SEVERE, exception.getMessage());
+            exception.printStackTrace();
         }
     }
 }

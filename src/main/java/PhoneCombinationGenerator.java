@@ -102,11 +102,11 @@ public class PhoneCombinationGenerator {
                                                        String combination,
                                                        List<String> combinations) {
         String currNumber = numbers[index];
-        // Keep track of trailing zeroes,because BigInteger erases them
+        // Keep track of leading zeroes because BigInteger erases them
         int numOfLeadingZeroes = countLeadingZeroes(currNumber);
         String leadingZeroes = "0".repeat(numOfLeadingZeroes);
         // Convert the current number to a BigInteger object and continuously add future numbers to the sum
-        // while the sum does not end with '10' or the next future number starts with '0'.
+        // while the sum is not dibisible by '10' or the next number starts with '0'.
         // That is because, a number ending with '10' cannot form a valid combination when adding with a number.
         // Also, a number ending with '0' is not a valid number which can be added to the sum
         BigInteger sum = new BigInteger(currNumber);
@@ -124,10 +124,10 @@ public class PhoneCombinationGenerator {
                 sum = sum.add(new BigInteger(numbers[i]));
                 generateCombinations(numbers, i + 1, combination + leadingZeroes + sum, combinations, true);
                 // Backtracking step
-                // Check if the larger addend of the future number can be combined with the current number
-                // The future number must not be in the range [11-19] and must not be divisible by 10.
-                // Set the future number to be the smaller addend.
-                // Concatenate the running combination with the sum of the current number plus the larger addend
+                // Check if the larger addend of the next number can be combined with the current number
+                // The next number must not be in the range [11-19] and must not be divisible by 10.
+                // Set the next number to be the smaller addend.
+                // Concatenate the running combination with the sum of the current number with the larger addend.
                 // Backtrack to the original state of the array
                 if(numberLen == 2 && !nextNumber.startsWith("1") && !nextNumber.endsWith("0")) {
                     String largerAddend = nextNumber.substring(0, numberLen - 1) + "0";
