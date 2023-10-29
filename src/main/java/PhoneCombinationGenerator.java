@@ -20,7 +20,7 @@ public class PhoneCombinationGenerator {
          1st case
          Check for combinations inside the current combination by splitting the number to its addends.
          For example 69 can be interpreted as 69 or 609
-         Another example is 425 which can be interpreted as (425, 40025, 400205)
+         Another example is 425 which can be interpreted as (425, 40025, 400205, 4205)
          */
         findCombinationsInsideNumber(numbers, index, combination, combinations);
         /*
