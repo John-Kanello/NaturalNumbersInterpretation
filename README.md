@@ -11,7 +11,7 @@ There are 3 cases with which the algorithm identifies possible ambiguities in an
 1. It checks if the current number can be split to its addends to form a new number. The first and greater number must be divisible
   by ‘10’ otherwise no new combination will be formed.</br>For example, the number 69 can have two possible interpretations 69 itself or 609(60+9).
 
-   Note, one extra piece of logic that I added to this algorithm is checking whether an addend of
+   Note, one extra piece of logic that I added to this step is checking whether an addend of
    the current number can be combined with future numbers to create more combinations.</br>
    Let's assume we have 2 numbers: 420 and 2.
    In English, the possible interpretations are 4202, 422, 400202 and finally 40022.
