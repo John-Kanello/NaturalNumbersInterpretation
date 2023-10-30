@@ -34,7 +34,7 @@ public class PhoneCombinationGenerator {
          3rd case
          Extend the running combination by concatenating it with the current number.
          Note, we cannot extend the combination if we have split the current number to its addends.
-         See findCombinationsInsideNumberAtIndex for further explanation.
+         See findCombinationsInsideNumber for further explanation.
          */
         if(!canExtendCombination) {
             return combinations;
@@ -107,9 +107,9 @@ public class PhoneCombinationGenerator {
         int numOfLeadingZeroes = countLeadingZeroes(currNumber);
         String leadingZeroes = "0".repeat(numOfLeadingZeroes);
         // Convert the current number to a BigInteger object and continuously add future numbers to the sum
-        // while the sum is not dibisible by '10' or the next number starts with '0'.
+        // while the sum is not divisible by '10' or the next number starts with '0'.
         // That is because, a number ending with '10' cannot form a valid combination when adding with a number.
-        // Also, a number ending with '0' is not a valid number which can be added to the sum
+        // Also, a number starting with '0' is not a valid number which can be added to the sum
         BigInteger sum = new BigInteger(currNumber);
         for(int i = index + 1; i < numbers.length; i++) {
             if(sum.toString().endsWith("10") || numbers[i].startsWith("0")) {
